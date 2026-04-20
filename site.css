@@ -1130,6 +1130,27 @@ body.page-legal :focus-visible {
     --header-height: 82px;
   }
 
+  .header-inner {
+    position: relative;
+  }
+
+  .brand {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  .header-nav-wrap {
+    order: 3;
+    margin-left: 10px;
+    position: static;
+  }
+
+  .header-cta {
+    order: 2;
+    margin-left: auto;
+    padding-inline: 18px;
+  }
+
   .nav-toggle {
     display: inline-flex;
     position: relative;
@@ -1140,7 +1161,9 @@ body.page-legal :focus-visible {
     position: absolute;
     top: calc(100% + 14px);
     right: 0;
-    min-width: min(320px, calc(100vw - 32px));
+    left: auto;
+    width: min(320px, calc(100vw - 24px));
+    max-width: calc(100vw - 24px);
     padding: 18px;
     border-radius: 24px;
     border: 1px solid var(--line);
@@ -1157,6 +1180,10 @@ body.page-legal :focus-visible {
     gap: 16px;
   }
 
+  .site-nav a {
+    width: 100%;
+  }
+
   body.page-legal .site-nav {
     border-color: var(--line);
     background: rgba(3, 5, 13, 0.97);
@@ -1170,10 +1197,6 @@ body.page-legal :focus-visible {
 
   .site-nav a::after {
     bottom: -4px;
-  }
-
-  .header-cta {
-    padding-inline: 18px;
   }
 
   .hero {
