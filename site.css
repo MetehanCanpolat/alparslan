@@ -358,8 +358,12 @@ body.nav-open .nav-toggle::after {
   z-index: 1;
   display: grid;
   grid-template-columns: minmax(0, 0.94fr) minmax(420px, 1.06fr);
+  grid-template-areas:
+    "copy visual"
+    "meta visual";
   align-items: center;
-  gap: clamp(34px, 5vw, 72px);
+  column-gap: clamp(34px, 5vw, 72px);
+  row-gap: 18px;
   padding-top: 20px;
   overflow: visible;
 }
@@ -410,23 +414,30 @@ body.nav-open .nav-toggle::after {
 }
 
 .hero-copy {
+  grid-area: copy;
   position: relative;
   z-index: 2;
   max-width: 37rem;
   padding-block: 26px;
 }
 
+.hero-meta {
+  grid-area: meta;
+  position: relative;
+  z-index: 2;
+  max-width: 37rem;
+}
+
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 14px;
-  margin-top: 34px;
 }
 
 .hero-notes {
   display: grid;
   gap: 12px;
-  margin-top: 30px;
+  margin-top: 24px;
   max-width: 36rem;
 }
 
@@ -464,6 +475,7 @@ body.nav-open .nav-toggle::after {
 }
 
 .hero-visual {
+  grid-area: visual;
   position: relative;
   z-index: 1;
   min-height: clamp(560px, 72vh, 760px);
@@ -1066,7 +1078,6 @@ body.page-legal :focus-visible {
 }
 
 @media (max-width: 1080px) {
-  .hero-grid,
   .story-grid,
   .trust-grid,
   .footer-grid,
@@ -1074,9 +1085,17 @@ body.page-legal :focus-visible {
     grid-template-columns: 1fr;
   }
 
+  .hero-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "copy"
+      "visual"
+      "meta";
+    row-gap: 24px;
+  }
+
   .hero-visual {
     min-height: 500px;
-    order: -1;
     justify-content: center;
     margin-right: 0;
   }
