@@ -437,10 +437,47 @@ body.nav-open .nav-toggle::after {
   gap: 14px;
 }
 
+.hero-signals {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 24px;
+  max-width: 36rem;
+}
+
+.hero-signal {
+  display: flex;
+  align-items: center;
+  min-height: 62px;
+  padding: 14px 18px;
+  border-radius: 18px;
+  border: 1px solid rgba(230, 195, 112, 0.18);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.025)),
+    linear-gradient(90deg, rgba(230, 180, 74, 0.06), transparent 48%);
+  box-shadow: 0 14px 34px rgba(2, 6, 14, 0.16);
+  color: var(--surface);
+  font-size: 0.94rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.35;
+}
+
+.hero-signal::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  margin-right: 12px;
+  flex: 0 0 auto;
+  border-radius: 999px;
+  background: linear-gradient(180deg, var(--accent-soft), var(--accent-strong));
+  box-shadow: 0 0 0 6px rgba(230, 180, 74, 0.08);
+}
+
 .hero-notes {
   display: grid;
   gap: 12px;
-  margin-top: 24px;
+  margin-top: 16px;
   max-width: 36rem;
 }
 
@@ -1270,6 +1307,10 @@ body.page-legal :focus-visible {
 
   .hero-art {
     width: min(124%, 720px);
+  }
+
+  .hero-signals {
+    grid-template-columns: 1fr;
   }
 
   .section {
