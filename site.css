@@ -6,20 +6,23 @@
   --bg-elevated: rgba(6, 11, 22, 0.82);
   --bg-soft: #060d18;
   --bg-panel: rgba(7, 12, 24, 0.72);
+  --brand-blue: #133358;
+  --brand-blue-glow: rgba(19, 51, 88, 0.2);
   --surface: #eff5fb;
   --surface-strong: #ffffff;
-  --line: rgba(163, 200, 255, 0.18);
-  --line-strong: rgba(163, 200, 255, 0.34);
+  --line: rgba(230, 195, 112, 0.18);
+  --line-strong: rgba(230, 195, 112, 0.34);
   --text: #f5fbff;
   --text-muted: rgba(225, 237, 252, 0.74);
   --text-subtle: rgba(207, 223, 244, 0.56);
   --ink: #050b16;
   --ink-soft: rgba(5, 11, 22, 0.78);
-  --accent: #6de4ff;
-  --accent-strong: #37bedf;
-  --accent-glow: rgba(109, 228, 255, 0.22);
+  --accent: #e6b44a;
+  --accent-strong: #c99c3f;
+  --accent-soft: #f4d38e;
+  --accent-glow: rgba(230, 180, 74, 0.24);
   --success: #66e0b8;
-  --warning: #ffb55c;
+  --warning: #f0c068;
   --danger: #ff6d6d;
   --shadow-soft: 0 26px 70px rgba(0, 0, 0, 0.26);
   --shadow-hero: 0 32px 90px rgba(6, 12, 24, 0.55);
@@ -50,8 +53,8 @@ body {
   font-family: var(--font-body);
   color: var(--text);
   background:
-    radial-gradient(circle at 72% 28%, rgba(103, 221, 255, 0.11), transparent 20%),
-    radial-gradient(circle at 18% 22%, rgba(58, 132, 255, 0.08), transparent 26%),
+    radial-gradient(circle at 74% 26%, rgba(230, 180, 74, 0.12), transparent 18%),
+    radial-gradient(circle at 18% 22%, rgba(19, 51, 88, 0.18), transparent 24%),
     linear-gradient(180deg, #03050d 0%, #03050c 48%, #02040a 100%);
   line-height: 1.6;
 }
@@ -59,8 +62,8 @@ body {
 body.page-legal {
   color: var(--text);
   background:
-    radial-gradient(circle at 72% 28%, rgba(103, 221, 255, 0.1), transparent 18%),
-    radial-gradient(circle at 14% 18%, rgba(58, 132, 255, 0.07), transparent 24%),
+    radial-gradient(circle at 74% 26%, rgba(230, 180, 74, 0.1), transparent 18%),
+    radial-gradient(circle at 14% 18%, rgba(19, 51, 88, 0.16), transparent 24%),
     linear-gradient(180deg, #03050d 0%, #03050c 48%, #02040a 100%);
 }
 
@@ -148,7 +151,7 @@ body.page-legal .site-header {
   width: 58px;
   height: 58px;
   object-fit: contain;
-  filter: drop-shadow(0 8px 22px rgba(55, 190, 223, 0.26));
+  filter: drop-shadow(0 8px 24px rgba(201, 156, 63, 0.28));
 }
 
 .brand-text {
@@ -202,7 +205,7 @@ body.page-legal .site-nav a {
   bottom: -10px;
   height: 2px;
   border-radius: 999px;
-  background: linear-gradient(90deg, rgba(109, 228, 255, 0.1), rgba(109, 228, 255, 0.92));
+  background: linear-gradient(90deg, rgba(230, 180, 74, 0.1), rgba(230, 180, 74, 0.92));
   transform: scaleX(0);
   transform-origin: left;
   transition: transform var(--transition-fast);
@@ -249,9 +252,9 @@ body.page-legal .site-nav a.active {
 }
 
 .button-primary {
-  color: #041120;
-  background: linear-gradient(135deg, #a8f6ff 0%, #66dfff 48%, #7fe8c5 100%);
-  box-shadow: 0 14px 34px rgba(77, 215, 234, 0.24);
+  color: #180f03;
+  background: linear-gradient(135deg, #f5dfab 0%, #e6b44a 48%, #c98f38 100%);
+  box-shadow: 0 14px 34px rgba(201, 156, 63, 0.28);
 }
 
 .button-secondary {
@@ -334,7 +337,7 @@ body.nav-open .nav-toggle::after {
   inset: 0;
   background:
     linear-gradient(180deg, rgba(3, 5, 13, 0.08) 0%, rgba(3, 5, 13, 0.02) 100%),
-    linear-gradient(90deg, rgba(109, 228, 255, 0.04) 1px, transparent 1px);
+    linear-gradient(90deg, rgba(230, 180, 74, 0.04) 1px, transparent 1px);
   background-size: auto, 56px 56px;
   mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.86) 30%, transparent 100%);
   pointer-events: none;
@@ -345,9 +348,9 @@ body.nav-open .nav-toggle::after {
   position: absolute;
   inset: 14% 0 0 34%;
   background:
-    radial-gradient(circle at 24% 48%, rgba(109, 228, 255, 0.18), transparent 20%),
-    radial-gradient(circle at 60% 42%, rgba(72, 179, 255, 0.14), transparent 26%),
-    linear-gradient(90deg, rgba(109, 228, 255, 0.08), transparent 58%);
+    radial-gradient(circle at 24% 48%, rgba(230, 180, 74, 0.2), transparent 20%),
+    radial-gradient(circle at 60% 42%, rgba(19, 51, 88, 0.16), transparent 26%),
+    linear-gradient(90deg, rgba(230, 180, 74, 0.08), transparent 58%);
   filter: blur(22px);
   opacity: 0.92;
   pointer-events: none;
@@ -463,7 +466,7 @@ body.nav-open .nav-toggle::after {
 }
 
 .note-warning strong {
-  color: #ffd4a0;
+  color: var(--accent-soft);
 }
 
 .note-calm strong {
@@ -493,8 +496,8 @@ body.nav-open .nav-toggle::after {
   inset: 16% 8% 14% 8%;
   border-radius: 999px;
   background:
-    radial-gradient(circle at 56% 50%, rgba(109, 228, 255, 0.26) 0%, rgba(109, 228, 255, 0.08) 22%, transparent 52%),
-    linear-gradient(90deg, rgba(109, 228, 255, 0.14), rgba(109, 228, 255, 0.02) 62%, transparent 100%);
+    radial-gradient(circle at 56% 50%, rgba(230, 180, 74, 0.28) 0%, rgba(230, 180, 74, 0.08) 22%, transparent 52%),
+    linear-gradient(90deg, rgba(230, 180, 74, 0.14), rgba(230, 180, 74, 0.02) 62%, transparent 100%);
   filter: blur(34px);
   transform: skewX(-20deg);
   opacity: 0.84;
@@ -517,7 +520,7 @@ body.nav-open .nav-toggle::after {
   top: 37%;
   height: 24%;
   border-radius: 999px;
-  background: linear-gradient(90deg, rgba(109, 228, 255, 0), rgba(109, 228, 255, 0.24) 26%, rgba(109, 228, 255, 0.08) 62%, transparent 100%);
+  background: linear-gradient(90deg, rgba(230, 180, 74, 0), rgba(230, 180, 74, 0.24) 26%, rgba(230, 180, 74, 0.08) 62%, transparent 100%);
   filter: blur(15px);
   opacity: 0.82;
   transform: skewX(-28deg);
@@ -643,7 +646,7 @@ body.page-legal .section + .section {
   margin: 6px 0 0;
   font-size: 1rem;
   font-weight: 700;
-  color: #ffd6aa;
+  color: var(--accent-soft);
 }
 
 .story-media {
@@ -716,7 +719,7 @@ body.page-legal .section + .section {
 .trust-section {
   background:
     linear-gradient(180deg, rgba(3, 5, 13, 0.96), rgba(3, 5, 13, 0.92)),
-    radial-gradient(circle at 92% 12%, rgba(109, 228, 255, 0.1), transparent 28%);
+    radial-gradient(circle at 92% 12%, rgba(230, 180, 74, 0.1), transparent 28%);
 }
 
 .trust-grid {
@@ -938,7 +941,7 @@ body.page-legal .footer-column a:focus-visible {
 
 .policy-content a:hover,
 .policy-content a:focus-visible {
-  color: #a8f6ff;
+  color: var(--accent-soft);
 }
 
 .policy-article {
@@ -1056,12 +1059,12 @@ body.page-legal .footer-column a:focus-visible {
 }
 
 :focus-visible {
-  outline: 3px solid rgba(109, 228, 255, 0.7);
+  outline: 3px solid rgba(230, 180, 74, 0.72);
   outline-offset: 3px;
 }
 
 body.page-legal :focus-visible {
-  outline-color: rgba(109, 228, 255, 0.7);
+  outline-color: rgba(230, 180, 74, 0.72);
 }
 
 @keyframes pulseOrbit {
